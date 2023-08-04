@@ -1,0 +1,17 @@
+Linked List Data Structure
+
+Problem Solutions:
+
+1. Finding the Middle Node (Using the Tortoise and Hare Algorithm)
+
+public Node findMiddleNode() {
+        Node tortoise = head;
+        Node hare = head;
+        while (hare != null && hare.next != null) {
+            hare = hare.next.next;
+            tortoise = tortoise.next;
+            
+
+    }
+            return tortoise;
+}
