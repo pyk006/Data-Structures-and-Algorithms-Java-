@@ -3,6 +3,7 @@ Linked List Data Structure
 Problem Solutions:
 
 1. Finding the Middle Node (Using the Tortoise and Hare Algorithm)
+Explanation: Having two pointers one going twice as fast as the other pointer. Once the "hare" pointer reaches the end, the "tortoise" pointer will reach the middle node.
 
 public Node findMiddleNode() {
         Node tortoise = head;
