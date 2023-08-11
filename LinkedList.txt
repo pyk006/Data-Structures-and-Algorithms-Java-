@@ -77,3 +77,26 @@ class Solution {
         return dummy.next;
     }
 }
+
+5. You are given a singly linked list that contains integer values, where some of these values may be duplicated.
+Your task is to implement a method called removeDuplicates() within the LinkedList class that removes all duplicate values from the list.
+
+public void removeDuplicates() {
+        Map<Integer, Integer> mapOfDupe = new HashMap<>();
+        Node dummy = new Node(0);
+        dummy.next = head;
+        Node prev = dummy;
+        Node current = dummy.next;
+        
+        while (current != null) {
+            if (!mapOfDupe.containsKey(current.value)) {
+                mapOfDupe.put(current.value, 1);
+                prev = current;
+
+            } else {
+                prev.next = current.next;
+                length -= 1;
+            }
+            current = current.next;
+        }
+    }
